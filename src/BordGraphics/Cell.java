@@ -7,12 +7,18 @@ public class Cell
 	private int _row;
 	private int _col;
 	private Img _imgBackground; 
-	private enum SoldierColor{Red,Blue,Empty};
+	public static enum cellStatus{Red,Blue,Empty};
+	private cellStatus _cellStatus;
 	private boolean _isPosibleCell;
 	private Img _imgSoldier;
-	private enum SoldierType{Rock,Paper,Scissors};
-	private  static SoldierType _soldierType;
-	public Cell(int row, int col, Img imgBackground, boolean isPosibleCell, Img imgSoldier,SoldierType soldierType) 
+	public static enum SoldierType{Rock,Paper,Scissors};
+	private SoldierType _soldierType;
+	private int _x;
+	private int _y;
+	private boolean _arrow = false;
+	
+	public Cell(int row, int col, Img imgBackground, boolean isPosibleCell, 
+			Img imgSoldier,SoldierType soldierType,cellStatus cellStatus,int x,int y,boolean arrow) 
 	{
 		_row = row;
 		_col = col;
@@ -20,6 +26,34 @@ public class Cell
 		_isPosibleCell = isPosibleCell;
 		_imgSoldier = imgSoldier;
 		_soldierType = soldierType;
+		_cellStatus = cellStatus;
+		_x=x;
+		_y=y;
+		_arrow = arrow;
+	}
+	public boolean is_arrow() {
+		return _arrow;
+	}
+	public void set_arrow(boolean _arrow) {
+		this._arrow = _arrow;
+	}
+	public int get_x() {
+		return _x;
+	}
+	public void set_x(int _x) {
+		this._x = _x;
+	}
+	public int get_y() {
+		return _y;
+	}
+	public void set_y(int _y) {
+		this._y = _y;
+	}
+	public cellStatus get_cellStatus() {
+		return _cellStatus;
+	}
+	public void setCellStatus(cellStatus cellStatus) {
+		this._cellStatus = cellStatus;
 	}
 	public SoldierType getSoldierType() {
 		return _soldierType;
