@@ -188,8 +188,8 @@ public class BoardPanel extends JPanel implements MouseListener
 	{
 		// TODO Auto-generated method stub
 		IJ ij = locationToIJ(e.getX(),e.getY());
-		int i = ij.get_i();
-		int j = ij.get_j();
+		int i = ij.getI();
+		int j = ij.getI();
 		clickedSoldier(i,j);
 		System.out.println("ewqwqewqe");
 	}
