@@ -31,25 +31,25 @@ public class Cell
 		_y=y;
 		_arrow = arrow;
 	}
-	public boolean is_arrow() {
+	public boolean isArrow() {
 		return _arrow;
 	}
-	public void set_arrow(boolean _arrow) {
-		this._arrow = _arrow;
+	public void setArrow(boolean arrow) {
+		this._arrow = arrow;
 	}
-	public int get_x() {
+	public int getX() {
 		return _x;
 	}
-	public void set_x(int _x) {
-		this._x = _x;
+	public void setX(int x) {
+		this._x = x;
 	}
-	public int get_y() {
+	public int getY() {
 		return _y;
 	}
-	public void set_y(int _y) {
-		this._y = _y;
+	public void setY(int y) {
+		this._y = y;
 	}
-	public cellStatus get_cellStatus() {
+	public cellStatus getCellStatus() {
 		return _cellStatus;
 	}
 	public void setCellStatus(cellStatus cellStatus) {
